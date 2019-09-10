@@ -274,3 +274,8 @@ a {
 .weatherBTN {
   font-family: 'Gayathri', sans-serif;
 }
+
+.bloglistBTN {
+  width: 110px;
+  background-color:  #979599;
+}

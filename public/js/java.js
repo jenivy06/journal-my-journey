@@ -51,5 +51,9 @@ $(document).ready(function(){
 
     // Running the getcityweather function(passing in the city and state as arguments)
     getCityWeather(inputCity);
+    $("#city-form").trigger("reset");
     })
+    
+
+    
 });

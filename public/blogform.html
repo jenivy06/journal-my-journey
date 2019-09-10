@@ -3,27 +3,51 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Create a Blog | Track My Journey</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-   <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-   <!-- Compiled and minified JavaScript -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Create a Blog | Journal My Journey</title>
+  <meta charset="UTF-8">
+    <meta name="description" content="Jenny Ivy is a web developer, editor, writer and digital media specialist. She is available for website content management.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Libre+Caslon+Text|Noto+Serif|PT+Serif|Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5052251c2a.js"></script>
+    <script src="js/java.js"></script>
+    <script src="js/materialize.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Gayathri|Kalam|Open+Sans+Condensed:300|Rubik&display=swap" rel="stylesheet">
+   
+   
 
+    
+</head>
 <body>
+       <div class="navbar-fixed">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                                
+                                <a href="#!" class="brand-logo"></a>
+                                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+                                <ul class="right hide-on-med-and-down">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="blogform.html">Create Blog</a></li>
+                                <li><a href="bloglist.html">All Blogs</a></li>
+                                <li><a href="weather.html">Check Weather</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
   <div class="container">
     <div class="row">
       <div class="row">
         <div class="col-sm-2 mt-4">
-          <a class="btn btn-light" href="/bloglist.html">Go to Blog List</a>
+          <button class="bloglistBTN" href="/bloglist.html">Go to Blog List</button>
         </div>
       </div>
       <div class="container">
@@ -34,7 +58,7 @@
             <input type="text" class="form-control" id="title">
             <br />
             <label for="body" id="titleLabel">Write a Blog:</label>
-            <textarea class="form-control" rows="50" id="body"></textarea>
+            <textarea class="form-control" rows="20" id="body"></textarea>
             <div class="form-group">
               
                 <label for="location" id="titleLabel">Pick a Category:</label>
