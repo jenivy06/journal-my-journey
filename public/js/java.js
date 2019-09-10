@@ -25,12 +25,13 @@ $(document).ready(function(){
         console.log(response);
 
         // Transfer content to HTML
-        $(".city").html("<h1>" + response.location.name + " Weather Details</h1>");
-        $(".region").html("<h1>" + response.location.region + " Weather Details</h1>");
+        $(".city").html("<h4>" + response.location.name + "," + " " + response.location.region + " Weather Details: " + "</h4>");
+        
         // $(".wind").text("Wind Speed: " + response.wind;
         // $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").text("Temperature (F) " + response.current.temp_f);
-        $(".wind").text("Wind speed (mph): " + response.current.wind_mph)
+        $(".temp").html("<h5>" + "Temperature (F): " + response.current.temp_f + "</h5>");
+        $(".wind").html("<h5>" + "Wind speed (mph): " + response.current.wind_mph + "</h5>");
+        $(".humidity").html("<h5>" + "Humidity (%): " + response.current.humidity + "</h5>");
 
         // Log the data in the console as well
         // console.log("Wind Speed: " + response.wind.speed);
@@ -46,8 +47,9 @@ $(document).ready(function(){
     event.preventDefault();
     // Storing the artist name
     var inputCity = $("#city-input").val().trim();
+    
 
-    // Running the searchBandsInTown function(passing in the artist as an argument)
+    // Running the getcityweather function(passing in the city and state as arguments)
     getCityWeather(inputCity);
     })
 });
