@@ -34,6 +34,8 @@ button.edit {
 
 .parallax-container {
   height: 400px;
+  min-height: 50vh;
+  width: 100%
 }
 
 .navbar{
@@ -47,7 +49,7 @@ button.edit {
 
 .journey {
   font-family: 'Kalam', cursive;
-  color: black;
+  color: #D5D5D0
 }
 
 .track {
@@ -55,11 +57,13 @@ button.edit {
 }
 
 .footer {
-  background-color:#464646
+  background-color:#464646;
+  height: 100px;
 }
 
 .footertext {
   color: white;
+  padding-top: 50px;
 }
 
 *{
@@ -262,5 +266,6 @@ a {
 }
 
 .lowerIndex {
-  background-color: #F8F5CA
+  background-color: #979599;
+  height: 325px;
 }
