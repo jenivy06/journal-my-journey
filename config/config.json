@@ -1,25 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "brandy978",
-    "database": "journey_db",
-    "host": "127.0.0.1",
+    "username": "rxhltunr57jzqwey",
+    "password": "wbn4udwvwez6andt",
+    "database": "y723273zs7wft6hn",
+    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "brandy978",
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "rxhltunr57jzqwey",
+    "password": "wbn4udwvwez6andt",
+    "database": "y723273zs7wft6hn",
+    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "brandy978",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "rxhltunr57jzqwey",
+    "password": "wbn4udwvwez6andt",
+    "database": "y723273zs7wft6hn",
+    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   }
