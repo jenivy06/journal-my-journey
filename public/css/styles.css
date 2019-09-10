@@ -128,7 +128,7 @@ h1.flippingCards{
 	height: auto;
 	border-radius: 10px;
 	color: #fff;
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .back{
@@ -183,6 +183,7 @@ h1.flippingCards{
     -webkit-perspective: inherit;
             perspective: inherit;
     z-index: 2;
+    
 }
 
 .container .back{
@@ -268,4 +269,8 @@ a {
 .lowerIndex {
   background-color: #979599;
   height: 325px;
+}
+
+.weatherBTN {
+  font-family: 'Gayathri', sans-serif;
 }

@@ -102,7 +102,7 @@
                                       </div>
                                       <div class="back">
                                           <div class="inner">
-                                                <button data-target="modal1" class="btn modal-trigger">Modal</button>
+                                                <a data-target="modal1" class="weatherBTN modal-trigger"><i class="fas fa-plus"></i> <br>Click to Check Local Weather</a>
                                           </div>
                                       </div>
                                   </div>
@@ -123,11 +123,21 @@
        <!-- Modal Structure -->
   <div id="modal1" class="modal">
         <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+          <h4 class="weatherHeader"><i class="fas fa-sun"></i> Check Today's Weather! Enter a city <i class="fas fa-cloud"></i></h4>
+          <p><form id="city-form">
+                <label for="city-input">Enter a City: </label>
+                <input type="text" id ="city-input">
+                <button class="btn-small" input id="select-city" type="submit">Submit</button>
+              </form>
+              <!-- Retrieved data will be dumped here -->
+              <div class="city"></div>
+              <div class="region"></div>
+              <div class="wind"></div>
+              <div class="humidity"></div>
+              <div class="temp"></div></p>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
         </div>
       </div>
                 </body>
