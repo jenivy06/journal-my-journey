@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jenivy06/flashcard-study-app/issues"
   },
-  "homepage": "https://github.com/jenivy06/flashcard-study-app#readme"
+  "homepage": "https://github.com/jenivy06/flashcard-study-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
