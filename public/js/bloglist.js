@@ -4,11 +4,13 @@ $(document).ready(function() {
   // blog container holds blogs
   var blogContainer = $(".blog-container");
   var blogCategorySelect = $("#category");
+  var blogLocationSelect = $("#location");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handleBlogDelete);
   $(document).on("click", "button.edit", handleBlogEdit);
 
   blogCategorySelect.on("change", handleCategoryChange);
+  blogLocationSelect.on("change", handleLocationChange);
   var blogs;
 
   // This function grabs posts from the database and updates the view
@@ -62,7 +64,11 @@ $(document).ready(function() {
     newBlogHeading.addClass("card-header");
     var deleteBtn = $("<button>");
     deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
+    deleteBtn.addClass("delete btn");
+    deleteBtn.css({
+      "background-color": "black",
+      "color": "white"
+    })
     var editBtn = $("<button>");
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
@@ -70,40 +76,63 @@ $(document).ready(function() {
     var newBlogDate = $("<small>");
     
     var newBlogCategoryText = $("<h5>")
-    newBlogCategoryText.text("Category: ")
-    newBlogCategoryText.css({
-      "color": "purple",
-      "float": "right"
-    })
+    // newBlogCategoryText.text("Category: ")
+    // newBlogCategoryText.css({
+    //   "color": "#8A985A",
+    //   "float": "left",
+    //   "margin-top": "75px",
+    //   "margin-left": "100px"
+      
+    //})
     var newBlogCategory = $("<p>");
-    newBlogCategory.text(blog.category);
+    newBlogCategory.text("Category: " + blog.category);
     newBlogCategory.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top": "20px",
-      "margin-left": "500px"
+      "float": "left",
+      "color": "#8A985A"
     });
     var newBlogLocation = $("<p>");
-    newBlogLocation.text(blog.location);
+    var newBlogLocationText = $("<h5>")
+    // newBlogLocationText.text("Location: ");
+    // newBlogLocationText.css({
+    //     "color": "#8A985A",
+    //     "float": "left",
+    //     "margin-top": "10px"
+        
+    //     })
+    
+    newBlogLocation.text("Location: " + blog.location);
     newBlogLocation.css({
-      float: "left",
+      "float": "left",
       "font-weight": "700",
       "margin-top":
-      "-15px"
+      "20px",
+      "margin-left": "-75px",
+      "color": "#BB7E64"
     });
     var newBodyInputArea = $("<div>");
     newBodyInputArea.addClass("card-body");
     var newBlogBody = $("<p>");
+    newBlogBody.css({
+      "margin-left": "50px",
+      "margin-top": "25px"
+    })
     newBlogTitle.text(blog.title + " ");
+    newBlogTitle.css({
+      "text-decoration": "underline"
+    })
     newBlogBody.text(blog.body);
     var formattedDate = new Date(blog.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newBlogDate.text(formattedDate);
+    newBlogDate.css({
+      "float": "right"
+    })
     newBlogTitle.append(newBlogDate);
     newBlogHeading.append(deleteBtn);
     newBlogHeading.append(editBtn);
     newBlogHeading.append(newBlogTitle);
-    newBlogHeading.append(newBlogCategoryText);
+    // newBlogHeading.append(newBlogCategoryText);
+    // newBlogHeading.append(newBlogLocationText);
     newBlogHeading.append(newBlogCategory);
     newBlogHeading.append(newBlogLocation);
     newBlogBody.append(newBlogBody);
@@ -147,6 +176,12 @@ $(document).ready(function() {
   function handleCategoryChange() {
     var newBlogCategory = $(this).val();
     getBlogs(newBlogCategory);
+  }
+
+  // This function handles reloading new blogs when the location changes
+  function handleLocationChange() {
+    var newBlogLocation = $(this).val();
+    getBlogs(newBlogLocation);
   }
 
 });

@@ -277,7 +277,49 @@ a {
   font-family: 'Gayathri', sans-serif;
 }
 
-.bloglistBTN {
-  width: 110px;
-  background-color:  #979599;
+.bloglistBTN{
+  background:#B8A098;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  width: 250px;
+}
+
+.bloglistBTN:hover{
+  background:#fff;
+  color:#464646;
+}
+
+.bloglistBTN:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #464646;
+  transition:400ms ease all;
+}
+.bloglistBTN:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.bloglistBTN:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.submitBTN {
+  background-color: #B8A098;
+}
+
+.submitBTN:hover{
+  color: black;
 }
