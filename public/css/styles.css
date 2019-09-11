@@ -323,3 +323,14 @@ a {
 .submitBTN:hover{
   color: black;
 }
+
+.weather-wrapper{
+  background-color:  #fff;
+  margin-top: 50px;
+  width: 1150px
+}
+
+.weatherLower {
+  height: 500px;
+  margin-bottom: 100px;
+}

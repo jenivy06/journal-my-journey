@@ -4,72 +4,76 @@
 <head>
   <meta charset="utf-8">
   <title>Check Weather Conditions | Journal My Journey</title>
+  <meta charset="UTF-8">
+    <meta name="description" content="Jenny Ivy is a web developer, editor, writer and digital media specialist. She is available for website content management.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Libre+Caslon+Text|Noto+Serif|PT+Serif|Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5052251c2a.js"></script>
+    <script src="js/java.js"></script>
+    <script src="js/materialize.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Gayathri|Kalam|Open+Sans+Condensed:300|Rubik&display=swap" rel="stylesheet">
+   
+   
 </head>
 
 <body>
-  <form id="city-form">
-    <label for="city-input">Choose Your City: </label>
-    <input type="text" id ="city-input">
-    <input id="select-city" type="submit">
-  </form>
-  <!-- Retrieved data will be dumped here -->
-  <div class="city"></div>
-  <div class="region"></div>
-  <div class="wind"></div>
-  <div class="humidity"></div>
-  <div class="temp"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    // This is our API key
-    var APIKey = "hoTyk2NBwWjCrNVTIPpb1F0hxAIkt1kn";
-
-    function getCityWeather (cityQuery){
-
-    // Here we are building the URL we need to query the database
-    var queryURL = "https://api.apixu.com/v1/current.json?key=e543c83b86a646e7bce14523190909&q=" +
-      cityQuery;
-
-    // Here we run our AJAX call to the OpenWeatherMap API
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      // We store all of the retrieved data inside of an object called "response"
-      .then(function(response) {
-
-        // Log the queryURL
-        console.log(queryURL);
-
-        // Log the resulting object
-        console.log(response);
-
-        // Transfer content to HTML
-        $(".city").html("<h1>" + response.location.name + " Weather Details</h1>");
-        $(".region").html("<h1>" + response.location.region + " Weather Details</h1>");
-        // $(".wind").text("Wind Speed: " + response.wind;
-        // $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").text("Temperature (F) " + response.current.temp_f);
-        $(".wind").text("Wind speed (mph): " + response.current.wind_mph)
-
-        // Log the data in the console as well
-        // console.log("Wind Speed: " + response.wind.speed);
-        // console.log("Humidity: " + response.main.humidity);
-        // console.log("Temperature (F): " + response.main.temp);
-        console.log("Temperature (F) " + response.current.condition.temp_f);
-
-      });
-    }
-       // Event handler for user clicking the select-artist button
-  $("#select-city").on("click", function(event) {
-    // Preventing the button from trying to submit the form
-    event.preventDefault();
-    // Storing the artist name
-    var inputCity = $("#city-input").val().trim();
-
-    // Running the searchBandsInTown function(passing in the artist as an argument)
-    getCityWeather(inputCity);
-    })
-  </script>
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper">
+            <div class="container">
+                <div class="nav-wrapper">
+                        
+                        <a href="#!" class="brand-logo"></a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+                        <ul class="right hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blogform.html">Create Blog</a></li>
+                        <li><a href="bloglist.html">All Blogs</a></li>
+                        <li><a href="weather.html">Check Weather</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class = "sectiondivider"></div>
+    <div class="container weatherLower valign-wrapper">
+      <div class="weather-wrapper">
+          <h4 class="weatherHeader"><i class="fas fa-cloud"></i> Check Today's Weather! Enter a city </h4>
+          <p><form id="city-form">
+                <label for="city-input">Enter a City: </label>
+                <input type="text" id ="city-input">
+                
+                <button class="btn-small" input id="select-city" type="submit">Submit</button>
+              </form>
+              <br>
+              <!-- Retrieved data will be dumped here -->
+              <p>
+              <div class="city"></div>
+              <div class="temp"></div>
+              <div class="wind"></div>
+              <div class="humidity"></div>
+              <p><i>powered by <a href="https://weatherstack.com/">weatherstack</a></i></p>
+            </p>
+</div>
+    </div>
+    <div class="section">
+        <div class = "sectiondivider"></div>
+      <!--footer-->
+      <footer class="footer">
+            <div class="footer">
+              <div class="container center footertext">
+              © 2019 Copyright Jenny Ivy
+              </div>
+            </div>
+          </footer>
+        </div>
 </body>
 
 </html>
