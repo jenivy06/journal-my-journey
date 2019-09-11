@@ -2,7 +2,7 @@
 
 ## Overview
 
-![screenshot](public/images/journalscreenshot.png)
+![screenshot](public/images/journalscreenshot-resized.png)
 
 • Link to deployed version: https://journalmyjourney.herokuapp.com/index.html
 
