@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       category: {
         type: DataTypes.STRING,
-        defaultValue: "Point of Interest"
+        defaultValue: "Thoughts of the Day"
       },
       location: {
         type: DataTypes.STRING,

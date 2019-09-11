@@ -22,7 +22,7 @@ button.edit {
 }
 
 #titleLabel {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .apptitle {
@@ -38,9 +38,11 @@ button.edit {
   width: 100%
 }
 
-.navbar{
-  background-color:#464646
+.nav-wrapper{
+  background-color:#464646;
 }
+
+
 
 .sectiondivider {
   background-color: #BBC595;
