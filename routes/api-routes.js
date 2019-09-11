@@ -7,88 +7,11 @@
 
 // Requiring our Todo model
 var db = require("../models");
-var crypto = require("crypto");
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
-   ////
-    // User
-    ////
-    // Get userId
-    app.get("/api/user", function (req, res) {
-      const data = req.query;
-      console.log(data);
-      if (!data.username) {
-          res.json({
-              error: "username not provided"
-          });
-          return;
-      }
-      if (!data.password) {
-          res.json({
-              error: "password not provided"
-          });
-          return;
-      }
-      console.log(data);
-      const shasum = crypto.createHash("sha1");
-      const hashedPassword = shasum.update(data.password).digest("hex");
-      console.log(hashedPassword);
-      db.User.findOne({where: {username: data.username, password: hashedPassword}})
-      .then(function (user) {
-          if (!user) {
-              res.json({error: `user with username: "${data.username}" not found matching this password`});
-              return;
-          }
-          res.json({userId: user.id});
-      })
-      .catch(function(err) {
-          console.log(err);
-          res.json({
-              error: err.name
-          });
-      });
-  });
-
-  // Create a new User
-  app.post("/api/user", function (req, res) {
-      const data = req.body;
-      if (!data.username) {
-          res.json({
-              error: "username not provided"
-          });
-          return;
-      }
-      if (!data.password) {
-          res.json({
-              error: "password not provided"
-          });
-          return;
-      }
-      if (!data.name) {
-          res.json({
-              error: "name not provided"
-          });
-          return;
-      }
-      console.log(data);
-      const shasum = crypto.createHash("sha1");
-      const hashedPassword = shasum.update(data.password).digest("hex");
-      console.log(hashedPassword);
-      data.password = hashedPassword;
-      db.User.create(data)
-      .then(function (user) {
-          res.json(user);
-      })
-      .catch(function(err) {
-          console.log(err);
-          res.json({
-              error: err.name
-          });
-      });
-  });
-
 
   // GET route for getting all of the blogs
   app.get("/api/blogs/", function(req, res) {
