@@ -167,8 +167,8 @@ $(document).ready(function() {
   function displayEmpty() {
     blogContainer.empty();
     var messageH2 = $("<h2>");
-    messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No blogs yet for this category or location! Navigate <a href='/blogform'>here</a> in order to create a new blog.");
+    messageH2.css({ "text-align": "center", "margin-bottom": "1000px" });
+    messageH2.html("No blogs yet for this category! Click <a href='/blogform'><i>here</i></a> in order to create a new blog.");
     blogContainer.append(messageH2);
   }
 

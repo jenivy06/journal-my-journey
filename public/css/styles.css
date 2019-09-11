@@ -38,6 +38,10 @@ button.edit {
   width: 100%
 }
 
+.weather-container{
+  height: 800px;
+}
+
 .nav-wrapper{
   background-color:#464646;
 }
@@ -326,11 +330,19 @@ a {
 
 .weather-wrapper{
   background-color:  #fff;
-  margin-top: 50px;
-  width: 1150px
+  
+
 }
 
 .weatherLower {
   height: 500px;
   margin-bottom: 100px;
+}
+
+.page-footer{
+  background-color: #464646;
+}
+
+.mt-4 {
+  height: 100px;
 }
