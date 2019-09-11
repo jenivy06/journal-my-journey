@@ -281,6 +281,12 @@ a {
   font-family: 'Gayathri', sans-serif;
 }
 
+.newblogBTN {
+  font-family: 'Gayathri', sans-serif;
+  width: 125px;
+  height: 50px;
+}
+
 .bloglistBTN{
   background:#B8A098;
   color:#fff;
