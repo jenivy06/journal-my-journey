@@ -42,7 +42,8 @@ body {
   .parallax-container {
     height: 700px;
     min-height: 50vh;
-    width: 100%
+    width: 100%;
+
   }
   
   .weather-container{
@@ -349,4 +350,9 @@ body {
 
   .page-footer{
     background-color: #464646;
+  }
+
+  .card{
+    margin-top: 80px;
+    background-color: #979599
   }
