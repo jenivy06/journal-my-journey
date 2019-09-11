@@ -287,6 +287,13 @@ a {
   height: 50px;
 }
 
+.homepageBTN {
+  font-family: 'Gayathri', sans-serif;
+  width: 125px;
+  height: 50px;
+  margin-left: 50px;
+}
+
 .bloglistBTN{
   background:#B8A098;
   color:#fff;
