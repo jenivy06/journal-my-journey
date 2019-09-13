@@ -16,6 +16,8 @@ Users are also able to access current weather conditions for specifified cities 
 
 *HTML5<br/>
 *CSS3<br/>
+*Javascript<br/>
+*jQuery<br/>
 *Sequelize<br/>
 *MySQL<br/>
 *Express<br/>
