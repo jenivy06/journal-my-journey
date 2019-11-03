@@ -1,14 +1,15 @@
+21
 $(document).ready(function(){
     $('.parallax').parallax(); 
     $('.sidenav').sidenav();
     $('.modal').modal();
-    var APIKey = "hoTyk2NBwWjCrNVTIPpb1F0hxAIkt1kn";
+    var APIKey = "15dedf1a4014345a017a3b09bfe1f3a8";
 
     function getCityWeather (cityQuery){
 
     // Here we are building the URL we need to query the database
-    var queryURL = "https://api.apixu.com/v1/current.json?key=e543c83b86a646e7bce14523190909&q=" +
-      cityQuery;
+    var queryURL = "https://api.weatherstack.com/forecast?access_key=15dedf1a4014345a017a3b09bfe1f3a8&query=" +
+      cityQuery 
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -29,15 +30,16 @@ $(document).ready(function(){
         
         // $(".wind").text("Wind Speed: " + response.wind;
         // $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").html("<h5>" + "Temperature (F): " + response.current.temp_f + "</h5>");
-        $(".wind").html("<h5>" + "Wind speed (mph): " + response.current.wind_mph + "</h5>");
+        $(".temp").html("<h5>" + "Temperature (C): " + response.current.temperature + "</h5>");
+        $(".cloudcover").html("<h5>" + "Cloudcover (%): " + response.current.cloudcover+ "</h5>");
+        $(".wind").html("<h5>" + "Wind speed (mph): " + response.current.wind_speed + "</h5>");
         $(".humidity").html("<h5>" + "Humidity (%): " + response.current.humidity + "</h5>");
 
         // Log the data in the console as well
         // console.log("Wind Speed: " + response.wind.speed);
         // console.log("Humidity: " + response.main.humidity);
         // console.log("Temperature (F): " + response.main.temp);
-        console.log("Temperature (F) " + response.current.condition.temp_f);
+        console.log("Temperature (F) " + response.current.temperature);
 
       });
     }
@@ -54,7 +56,4 @@ $(document).ready(function(){
     $("#city-form").trigger("reset");
     
     })
-    
-
-    
 });
